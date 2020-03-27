@@ -1,0 +1,28 @@
+name: gallerytrigger
+description: A Flutter plugin able to trigger the iOS and Android galleries in order to let them update and show a new resource.
+version: 1.0.0
+author: Leonardo Rignanese
+homepage: github
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  mime_type: ^0.2.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: it.rignanese.leo.gallerytrigger
+        pluginClass: GallerytriggerPlugin
+      ios:
+        pluginClass: GallerytriggerPlugin
