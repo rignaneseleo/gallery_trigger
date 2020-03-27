@@ -1,3 +1,6 @@
+## 1.0.0+2
+- Added Example
+
 ## 1.0.0+1
 - Renaming
 
