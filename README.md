@@ -9,7 +9,7 @@ With this plugin you can manually trigger it and add the picture in [MediaStore]
 ```
   String path = await downloadPicFromNetwork();
   String album = "Example";
-  await GalleryTrigger.addResourceInGallery(filePath: path, albumName: null);
+  await GalleryTrigger.addResourceInGallery(filePath: path, albumName: album);
 ```
 
 ## Possible Improvements
