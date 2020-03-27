@@ -5,7 +5,7 @@ A Flutter plugin able to trigger the iOS and Android galleries in order to let t
 When you download a picture or video file with your Flutter app you won't see it in the gallery until your device refreshes the internal database.
 With this plugin you can manually trigger it and add the picture in [MediaStore](https://developer.android.com/reference/android/provider/MediaStore) on Android or in Photos in iOS.
 
-## Improvments
+## Possible Improvements
 - Return a consistent bool value dipending on the procedure success/failure
 - Merge the photo and video logics in swift
 - Add resources on iOS without declaring an album name
