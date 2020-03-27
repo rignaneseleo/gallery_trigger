@@ -6,6 +6,7 @@ When you download a picture or video file with your Flutter app you won't see it
 With this plugin you can manually trigger it and add the picture in [MediaStore](https://developer.android.com/reference/android/provider/MediaStore) on Android or in Photos in iOS.
 
 ## Possible Improvements
+- Clean the procject (remove all the useless files and folders)
 - Return a consistent bool value dipending on the procedure success/failure
 - Merge the photo and video logics in swift
 - Add resources on iOS without declaring an album name
