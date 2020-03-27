@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.content.Context;
 import java.io.File;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
@@ -18,6 +19,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
  */
 public class GallerytriggerPlugin implements FlutterPlugin, MethodCallHandler {
     private MethodChannel channel;
+    private Context applicationContext;
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -28,6 +30,13 @@ public class GallerytriggerPlugin implements FlutterPlugin, MethodCallHandler {
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "gallerytrigger");
         channel.setMethodCallHandler(new GallerytriggerPlugin());
+
+        final GallerytriggerPlugin instance = new GallerytriggerPlugin();
+        instance.onAttachedToEngine(registrar.context());
+    }
+
+    private void onAttachedToEngine(Context applicationContext) {
+        this.applicationContext = applicationContext;
     }
 
     @Override
@@ -49,6 +58,6 @@ public class GallerytriggerPlugin implements FlutterPlugin, MethodCallHandler {
     private void refreshMediaStore(@NonNull String filePath) {
         Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
         intent.setData(Uri.fromFile(new File(filePath)));
-        getActivity().sendBroadcast(intent);
+        applicationContext.sendBroadcast(intent);
     }
 }
