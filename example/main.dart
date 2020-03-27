@@ -3,7 +3,7 @@ import '../lib/gallerytrigger.dart';
 main() async {
   String path = await downloadPicFromNetwork();
   String album = "Example";
-  GalleryTrigger.addResourceInGallery(filePath: path, albumName: null);
+  GalleryTrigger.addResourceInGallery(filePath: path, albumName: album);
 }
 
 downloadPicFromNetwork() {

@@ -1,3 +1,7 @@
+## 1.0.1
+- Fixed Context error
+- Fixed example
+
 ## 1.0.0+2
 - Added Example
 
