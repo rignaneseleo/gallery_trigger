@@ -8,7 +8,7 @@ import 'package:mime_type/mime_type.dart';
 
 enum FileType { image, video }
 
- class GalleryTrigger {
+class GalleryTrigger {
   static const MethodChannel _channel = const MethodChannel('gallerytrigger');
 
   /// Adds a resource file with file path [filePath] to the native systems galleries (on iOS is Photos, on Android is MediaStore).
@@ -56,5 +56,3 @@ enum FileType { image, video }
     return false;
   }
 }
-
-
